@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Add 3 points for field goal when button is clicked
-        fieldGoalButton = (Button) findViewById(R.id.button_fieldgoal);
+        fieldGoalButton = (Button) findViewById(R.id.button_field_goal);
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

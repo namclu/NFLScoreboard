@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Global variables
+    int scoreTeamA = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -25,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         touchdownButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                displayForTeamA(6);
+                scoreTeamA += 6;
+                displayForTeamA(scoreTeamA);
             }
         });
 
@@ -34,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayForTeamA(3);
+                scoreTeamA += 3;
+                displayForTeamA(scoreTeamA);
             }
         });
 
@@ -43,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayForTeamA(2);
+                scoreTeamA += 2;
+                displayForTeamA(scoreTeamA);
             }
         });
 
@@ -52,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         extraPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                displayForTeamA(1);
+                scoreTeamA += 1;
+                displayForTeamA(scoreTeamA);
             }
         });
     }

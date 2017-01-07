@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     static final int TOUCHDOWN = 6;
     static final int FIELD_GOAL = 3;
     static final int TWO_POINTS = 2;
-    static final int POINT_AFTER_TD = 1;
+    static final int EXTRA_POINT = 1;
     /*
      * @param scoreTeamA tracks the cumulative score for team A
      * @param scoreTeamB tracks the cumulative score for team B
@@ -37,95 +37,42 @@ public class MainActivity extends AppCompatActivity {
          */
         // Add 6 points for touchdown when button is clicked
         touchdownButton = (Button) findViewById(R.id.button_touchdown_a);
-        touchdownButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scoreTeamA += TOUCHDOWN;
-                displayForTeamA(scoreTeamA);
-            }
-        });
+        touchdownButton.setOnClickListener(this);
 
         // Add 3 points for field goal when button is clicked
         fieldGoalButton = (Button) findViewById(R.id.button_field_goal_a);
-        fieldGoalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamA += FIELD_GOAL;
-                displayForTeamA(scoreTeamA);
-            }
-        });
+        fieldGoalButton.setOnClickListener(this);
 
         // Add 2 points for two point conversion when button is clicked
         twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion_a);
-        twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamA += TWO_POINTS;
-                displayForTeamA(scoreTeamA);
-            }
-        });
+        twoPointConversionButton.setOnClickListener(this);
 
         // Add 1 point for extra point when button is clicked
         extraPointButton = (Button) findViewById(R.id.button_extra_point_a);
-        extraPointButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamA += POINT_AFTER_TD;
-                displayForTeamA(scoreTeamA);
-            }
-        });
+        extraPointButton.setOnClickListener(this);
 
         /*
          * Code interaction for Team B
          */
         // Add 6 points for touchdown when button is clicked
         touchdownButton = (Button) findViewById(R.id.button_touchdown_b);
-        touchdownButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scoreTeamB += TOUCHDOWN;
-                displayForTeamB(scoreTeamB);
-            }
-        });
+        touchdownButton.setOnClickListener(this);
 
         // Add 3 points for field goal when button is clicked
         fieldGoalButton = (Button) findViewById(R.id.button_field_goal_b);
-        fieldGoalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamB += FIELD_GOAL;
-                displayForTeamB(scoreTeamB);
-            }
-        });
+        fieldGoalButton.setOnClickListener(this);
 
         // Add 2 points for two point conversion when button is clicked
         twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion_b);
-        twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamB += TWO_POINTS;
-                displayForTeamB(scoreTeamB);
-            }
-        });
+        twoPointConversionButton.setOnClickListener(this);
 
         // Add 1 point for extra point when button is clicked
         extraPointButton = (Button) findViewById(R.id.button_extra_point_b);
-        extraPointButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreTeamB += POINT_AFTER_TD;
-                displayForTeamB(scoreTeamB);
-            }
-        });
+        extraPointButton.setOnClickListener(this);
 
         // Reset the score to 0 for both teams when button is clicked
         resetButton = (Button) findViewById(R.id.button_reset);
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetScore();
-            }
-        });
+        resetButton.setOnClickListener(this);
     }
 
     // displayForTeamA() sets the score for team A
@@ -147,5 +94,48 @@ public class MainActivity extends AppCompatActivity {
 
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
+    }
+
+    // Implement onClick() method
+    @Override
+    public void onClick(View view) {
+        // Perform action on click
+        switch (view.getId()) {
+            case R.id.button_touchdown_a:
+                scoreTeamA += TOUCHDOWN;
+                displayForTeamA(scoreTeamA);
+                break;
+            case R.id.button_field_goal_a:
+                scoreTeamA += FIELD_GOAL;
+                displayForTeamA(scoreTeamA);
+                break;
+            case R.id.button_two_point_conversion_a:
+                scoreTeamA += TWO_POINTS;
+                displayForTeamA(scoreTeamA);
+                break;
+            case R.id.button_extra_point_a:
+                scoreTeamA += EXTRA_POINT;
+                displayForTeamA(scoreTeamA);
+                break;
+            case R.id.button_touchdown_b:
+                scoreTeamB += TOUCHDOWN;
+                displayForTeamB(scoreTeamB);
+                break;
+            case R.id.button_field_goal_b:
+                scoreTeamB += FIELD_GOAL;
+                displayForTeamB(scoreTeamB);
+                break;
+            case R.id.button_two_point_conversion_b:
+                scoreTeamB += TWO_POINTS;
+                displayForTeamB(scoreTeamB);
+                break;
+            case R.id.button_extra_point_b:
+                scoreTeamB += EXTRA_POINT;
+                displayForTeamB(scoreTeamB);
+                break;
+            case R.id.button_reset:
+                resetScore();
+                break;
+        }
     }
 }

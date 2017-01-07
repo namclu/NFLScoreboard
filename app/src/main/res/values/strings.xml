@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NFLScoreboard</string>
+    <string name="app_name">NFL Scoreboard</string>
+    <string name="text_touchdown">Touchdown \n +6</string>
+    <string name="text_field_goal">Field goal \n +3</string>
+    <string name="text_two_points">Two points\n +2</string>
+    <string name="text_point_after_td">Point after TD \n +1</string>
 </resources>

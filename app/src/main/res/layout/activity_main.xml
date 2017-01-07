@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
 
         <!-- Team A Display -->
         <LinearLayout
@@ -18,8 +19,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
 
             <TextView
                 android:id="@+id/name_team_a"
@@ -43,25 +44,29 @@
                 android:id="@+id/button_touchdown_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Touchdown \n +6"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_touchdown"/>
 
             <Button
                 android:id="@+id/button_field_goal_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Field goal \n +3"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_field_goal"/>
 
             <Button
                 android:id="@+id/button_two_point_conversion_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Two points\n +2"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_two_points"/>
 
             <Button
                 android:id="@+id/button_extra_point_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Point after TD \n +1"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_point_after_td"/>
         </LinearLayout>
 
         <!-- Dividing line -->
@@ -78,8 +83,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
 
             <TextView
                 android:id="@+id/name_team_b"
@@ -103,25 +108,29 @@
                 android:id="@+id/button_touchdown_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Touchdown \n +6"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_touchdown"/>
 
             <Button
                 android:id="@+id/button_field_goal_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Field goal \n +3"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_field_goal"/>
 
             <Button
                 android:id="@+id/button_two_point_conversion_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Two points \n +2"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_two_points"/>
 
             <Button
                 android:id="@+id/button_extra_point_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Point after TD \n +1"/>
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/text_point_after_td"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -132,6 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
         android:text="Reset"/>
 
 </RelativeLayout>

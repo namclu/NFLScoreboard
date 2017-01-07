@@ -10,10 +10,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Initialize buttons
+        Button touchdownButton;
+        Button fieldGoalButton;
+        Button twoPointConversionButton;
+        Button extraPointButton;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button touchdownButton = (Button) findViewById(R.id.button_touchdown);
+        touchdownButton = (Button) findViewById(R.id.button_touchdown);
         touchdownButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button fieldGoalButton = (Button) findViewById(R.id.button_fieldgoal);
+        fieldGoalButton = (Button) findViewById(R.id.button_fieldgoal);
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion);
+        twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion);
         twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button extraPointButton = (Button) findViewById(R.id.button_extra_point);
+        extraPointButton = (Button) findViewById(R.id.button_extra_point);
         extraPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final int TOUCHDOWN = 6;
+    static final int FIELD_GOAL = 3;
+    static final int TWO_POINTS = 2;
+    static final int POINT_AFTER_TD = 1;
     /*
      * @param scoreTeamA tracks the cumulative score for team A
      * @param scoreTeamB tracks the cumulative score for team B
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         touchdownButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                scoreTeamA += 6;
+                scoreTeamA += TOUCHDOWN;
                 displayForTeamA(scoreTeamA);
             }
         });
@@ -46,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamA += 3;
+                scoreTeamA += FIELD_GOAL;
                 displayForTeamA(scoreTeamA);
             }
         });
@@ -56,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamA += 2;
+                scoreTeamA += TWO_POINTS;
                 displayForTeamA(scoreTeamA);
             }
         });
@@ -66,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         extraPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamA += 1;
+                scoreTeamA += POINT_AFTER_TD;
                 displayForTeamA(scoreTeamA);
             }
         });
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         touchdownButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                scoreTeamB += 6;
+                scoreTeamB += TOUCHDOWN;
                 displayForTeamB(scoreTeamB);
             }
         });
@@ -89,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamB += 3;
+                scoreTeamB += FIELD_GOAL;
                 displayForTeamB(scoreTeamB);
             }
         });
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamB += 2;
+                scoreTeamB += TWO_POINTS;
                 displayForTeamB(scoreTeamB);
             }
         });
@@ -109,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         extraPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreTeamB += 1;
+                scoreTeamB += POINT_AFTER_TD;
                 displayForTeamB(scoreTeamB);
             }
         });

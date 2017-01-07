@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/activity_vertical_margin">
 
-        <!-- Team A Display -->
+        <!-- Team A display group -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -73,11 +73,9 @@
         <LinearLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/colorDarkGray">
+            android:background="@color/colorDarkGray"/>
 
-        </LinearLayout>
-
-        <!-- Team B Display -->
+        <!-- Team B display group -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -135,6 +133,7 @@
 
     </LinearLayout>
 
+    <!-- Reset button-->
     <Button
         android:id="@+id/button_reset"
         android:layout_width="wrap_content"

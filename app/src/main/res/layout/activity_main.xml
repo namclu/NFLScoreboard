@@ -5,13 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.namlu.nflscoreboard.MainActivity">
 
+    <!-- Team A Display -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_weight="1"
         android:paddingLeft="8dp"
         android:paddingRight="8dp">
 
@@ -32,29 +34,78 @@
             android:text="0"/>
 
         <Button
-            android:id="@+id/button_touchdown"
+            android:id="@+id/button_touchdown_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Touchdown \n +6"/>
 
         <Button
-            android:id="@+id/button_field_goal"
+            android:id="@+id/button_field_goal_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Field goal \n +3"/>
 
         <Button
-            android:id="@+id/button_two_point_conversion"
+            android:id="@+id/button_two_point_conversion_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Two pt conversion \n +2"/>
+            android:text="Two points\n +2"/>
 
         <Button
-            android:id="@+id/button_extra_point"
+            android:id="@+id/button_extra_point_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pt after touchdown \n +1"/>
+            android:text="Point after TD \n +1"/>
+    </LinearLayout>
 
+    <!-- Team B Display -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/team_b_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="Team B"/>
+
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/button_touchdown_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Touchdown \n +6"/>
+
+        <Button
+            android:id="@+id/button_field_goal_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Field goal \n +3"/>
+
+        <Button
+            android:id="@+id/button_two_point_conversion_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two points \n +2"/>
+
+        <Button
+            android:id="@+id/button_extra_point_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Point after TD \n +1"/>
     </LinearLayout>
 
 </LinearLayout>

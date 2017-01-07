@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Global variables
     int scoreTeamA = 0;
+    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Add 3 points for field goal when button is clicked
-        fieldGoalButton = (Button) findViewById(R.id.button_field_goal);
+        fieldGoalButton = (Button) findViewById(R.id.button_field_goal_a);
         fieldGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Add 2 points for two point conversion when button is clicked
-        twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion);
+        twoPointConversionButton = (Button) findViewById(R.id.button_two_point_conversion_a);
         twoPointConversionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Add 1 point for extra point when button is clicked
-        extraPointButton = (Button) findViewById(R.id.button_extra_point);
+        extraPointButton = (Button) findViewById(R.id.button_extra_point_a);
         extraPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

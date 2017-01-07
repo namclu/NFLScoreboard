@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Button fieldGoalButton;
         Button twoPointConversionButton;
         Button extraPointButton;
+        Button resetButton;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -112,6 +113,15 @@ public class MainActivity extends AppCompatActivity {
                 displayForTeamB(scoreTeamB);
             }
         });
+
+        // Reset the score to 0 for both teams when button is clicked
+        resetButton = (Button) findViewById(R.id.button_reset);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetScore();
+            }
+        });
     }
 
     // displayForTeamA() sets the score for team A
@@ -124,5 +134,14 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.score_team_b);
         scoreView.setText(String.valueOf(score));
+    }
+
+    // resetScore() sets the score to 0 for both teams
+    public void resetScore() {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 }
